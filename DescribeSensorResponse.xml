@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swes:DescribeSensorResponse xmlns:swes="http://www.opengis.net/swes/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://www.opengis.net/swes/2.0 http://schemas.opengis.net/swes/2.0/swesDescribeSensor.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/base/gml.xsd http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd http://www.opengis.net/swe/1.0.1 http://schemas.opengis.net/sweCommon/1.0.1/swe.xsd">
+    <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+    <swes:description>
+        <swes:SensorDescription>
+            <swes:validTime>
+                <gml:TimePeriod gml:id="tp_25D37695BAD1BCA2138B934FC97B705B540B3D71">
+                    <gml:beginPosition>2015-03-18T22:53:48.848Z</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </swes:validTime>
+            <swes:data>
+                <sml:SensorML xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+                    xmlns:gml="http://www.opengis.net/gml"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:swe="http://www.opengis.net/swe/1.0.1" version="1.0.1">
+                    <sml:member>
+                        <sml:System gml:id="PTF_SystemVantagePro2">
+                            <gml:description>Vantage Pro2™ (6152, 6153) and Vantage Pro2™ Plus (6162, 6163) Wireless Weather Stations include two components: the Integrated Sensor Suite (ISS) which houses and manages the external sensor array, and the console which provides the user interface, data display, and calculations. The ISS and Vantage Pro2 console communicate via an FCC‐certified, license‐free, spread‐spectrum frequency‐hopping (FHSS) transmitter and receiver. Userselectable transmitter ID codes allow up to eight stations to coexist in the same geographic area. The frequency hopping spread spectrum technology provides greater communication strength over longer distances and areas of weaker reception. The Wireless Vantage Pro2 Plus weather station includes two additional sensors that are optional on the Vantage Pro2: the UV sensor and the solar radiation sensor.</gml:description>
+                            <gml:name>PTF - Wireless Vantage Pro2</gml:name>
+                            <sml:keywords>
+                                <sml:KeywordList>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P02/current/CSLR/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P02/current/CAPH/</sml:keyword>
+                                    <sml:keyword>http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525</sml:keyword>
+                                    <sml:keyword>offering:http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525/observations</sml:keyword>
+                                    <sml:keyword>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/ERWSSS01/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/</sml:keyword>
+                                    <sml:keyword>http://vocab.nerc.ac.uk/collection/P01/current/CPRRRG01/</sml:keyword>
+                                </sml:KeywordList>
+                            </sml:keywords>
+                            <sml:identification>
+                                <sml:IdentifierList>
+                                    <sml:identifier name="uniqueID">
+                                        <sml:Term definition="">
+                                            <sml:value>http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="Short Name">
+                                        <sml:Term definition="urn:ogc:def:identifier:OGC:shortName">
+                                            <sml:value>PTF-Davis-VantagePro2</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="Long Name">
+                                        <sml:Term definition="urn:ogc:def:identifier:OGC:longName">
+                                            <sml:value>Piattaforma Acqua Alta - Davis Vantage
+                                                Pro2</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="Manufacturer Name">
+                                        <sml:Term
+                                            definition="urn:ogc:def:identifier:OGC:manufacturerName">
+                                            <sml:value>Davis Instruments</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="Model Number">
+                                        <sml:Term
+                                            definition="urn:ogc:def:identifier:SBE:modelNumber">
+                                            <sml:value>Vantage Pro</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="shortName">
+                                        <sml:Term
+                                            definition="urn:ogc:def:identifier:OGC:1.0:shortname">
+                                            <sml:value>http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                    <sml:identifier name="longName">
+                                        <sml:Term
+                                            definition="urn:ogc:def:identifier:OGC:1.0:longname">
+                                            <sml:value>http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525</sml:value>
+                                        </sml:Term>
+                                    </sml:identifier>
+                                </sml:IdentifierList>
+                            </sml:identification>
+                            <sml:classification>
+                                <sml:ClassifierList>
+                                    <sml:classifier name="Intended application">
+                                        <sml:Term definition="SDN:P01::WMOCPWXX">
+                                            <sml:codeSpace
+                                                xlink:href="http://vocab.nerc.ac.uk/collection/P01/current/WMOCPWXX/"/>
+                                            <sml:value>Present weather in the atmosphere by visual
+                                                estimation and conversion to WMO code using table
+                                                4677/4501</sml:value>
+                                        </sml:Term>
+                                    </sml:classifier>
+                                    <sml:classifier name="Deployment role">
+                                        <sml:Term definition="SDN:L19::SDNKG01">
+                                            <sml:codeSpace
+                                                xlink:href="http://vocab.nerc.ac.uk/collection/L19/current/SDNKG01/"/>
+                                            <sml:value>instrument</sml:value>
+                                        </sml:Term>
+                                    </sml:classifier>
+                                </sml:ClassifierList>
+                            </sml:classification>
+                            <sml:validTime>
+                                <gml:TimePeriod>
+                                    <gml:beginPosition>2015-03-18T22:53:48.848Z</gml:beginPosition>
+                                    <gml:endPosition indeterminatePosition="unknown"/>
+                                </gml:TimePeriod>
+                            </sml:validTime>
+                            <sml:capabilities name="Physical Properties">
+                                <swe:DataRecord>
+                                    <swe:field name="weight">
+                                        <swe:Quantity definition="urn:ogc:def:property:weight">
+                                            <swe:uom code="kg"/>
+                                            <swe:value>2.6</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                    <swe:field name="length">
+                                        <swe:Quantity definition="urn:ogc:def:property:length">
+                                            <swe:uom code="mm"/>
+                                            <swe:value>355.0</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                    <swe:field name="width">
+                                        <swe:Quantity definition="urn:ogc:def:property:width">
+                                            <swe:uom code="mm"/>
+                                            <swe:value>238.0</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                    <swe:field name="height">
+                                        <swe:Quantity definition="urn:ogc:def:property:height">
+                                            <swe:uom code="mm"/>
+                                            <swe:value>279.0</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                    <swe:field name="material">
+                                        <swe:Category definition="urn:ogc:dictionary:OGC:material">
+                                            <swe:value>plastic</swe:value>
+                                        </swe:Category>
+                                    </swe:field>
+                                </swe:DataRecord>
+                            </sml:capabilities>
+                            <sml:capabilities name="Electrical Requirements">
+                                <swe:DataRecord>
+                                    <swe:field name="amperaggio">
+                                        <swe:Quantity>
+                                            <swe:uom code="mA"/>
+                                            <swe:value>0.14</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                    <swe:field name="voltaggio">
+                                        <swe:Quantity>
+                                            <swe:uom code="V"/>
+                                            <swe:value>5.0</swe:value>
+                                        </swe:Quantity>
+                                    </swe:field>
+                                </swe:DataRecord>
+                            </sml:capabilities>
+                            <sml:capabilities name="Status Capabilities">
+                                <swe:SimpleDataRecord>
+                                    <swe:field name="status">
+                                        <swe:Boolean>
+                                            <swe:value>true</swe:value>
+                                        </swe:Boolean>
+                                    </swe:field>
+                                    <swe:field name="mobile">
+                                        <swe:Boolean>
+                                            <swe:value>false</swe:value>
+                                        </swe:Boolean>
+                                    </swe:field>
+                                </swe:SimpleDataRecord>
+                            </sml:capabilities>
+                            <sml:capabilities name="Operational Capabilities">
+                                <swe:DataRecord>
+                                    <swe:field name="Storage Type">
+                                        <swe:Category
+                                            definition="urn:ogc:def:classifier:SBE:storageType">
+                                            <swe:value>internal memory</swe:value>
+                                        </swe:Category>
+                                    </swe:field>
+                                </swe:DataRecord>
+                            </sml:capabilities>
+                            <sml:capabilities name="offerings">
+                                <swe:SimpleDataRecord>
+                                    <swe:field
+                                        name="Offering for sensor offering:http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525">
+                                        <swe:Text
+                                            definition="http://www.opengis.net/def/offering/identifier">
+                                            <swe:value>offering:http://sp7.irea.cnr.it/sensors/geosk.ve.ismar.cnr.it/procedure/DavisInstruments/VantagePro/noSerialNumberDeclared/20141217115413720_11525/observations</swe:value>
+                                        </swe:Text>
+                                    </swe:field>
+                                </swe:SimpleDataRecord>
+                            </sml:capabilities>
+                            <sml:contact
+                                xlink:arcrole="urn:ogc:def:classifiers:OGC:contactType:manufacturer">
+                                <sml:ResponsibleParty>
+                                    <sml:organizationName>Davis Instruments</sml:organizationName>
+                                    <sml:contactInfo>
+                                        <sml:phone>
+                                            <sml:voice>tel:+01-5107329229</sml:voice>
+                                        </sml:phone>
+                                        <sml:address>
+                                            <sml:deliveryPoint>3465, Diablo Avanue</sml:deliveryPoint>
+                                            <sml:city>Hayward</sml:city>
+                                            <sml:administrativeArea>CA</sml:administrativeArea>
+                                            <sml:postalCode>94545-2778</sml:postalCode>
+                                            <sml:country>USA</sml:country>
+                                            <sml:electronicMailAddress>sales@davisnet.com</sml:electronicMailAddress>
+                                        </sml:address>
+                                        <sml:onlineResource xlink:href="http://www.davisnet.com"/>
+                                    </sml:contactInfo>
+                                </sml:ResponsibleParty>
+                            </sml:contact>
+                            <sml:contact
+                                xlink:arcrole="urn:ogc:def:classifiers:OGC:contactType:owner">
+                                <sml:ResponsibleParty>
+                                    <sml:organizationName>ISMAR</sml:organizationName>
+                                    <sml:contactInfo>
+                                        <sml:phone>
+                                            <sml:voice>tel:+39-0412407911</sml:voice>
+                                        </sml:phone>
+                                        <sml:address>
+                                            <sml:deliveryPoint>Castello 2737/F</sml:deliveryPoint>
+                                            <sml:city>Venezia</sml:city>
+                                            <sml:postalCode>30122</sml:postalCode>
+                                            <sml:country>IT</sml:country>
+                                            <sml:electronicMailAddress>mailto:mauro.bastianini@ismar.cnr.it</sml:electronicMailAddress>
+                                        </sml:address>
+                                        <sml:onlineResource xlink:href="http://www.ismar.cnr.it/"/>
+                                    </sml:contactInfo>
+                                </sml:ResponsibleParty>
+                            </sml:contact>
+                            <sml:contact
+                                xlink:arcrole="urn:ogc:def:classifiers:OGC:contactType:operator">
+                                <sml:ResponsibleParty>
+                                    <sml:organizationName>ISMAR</sml:organizationName>
+                                    <sml:contactInfo>
+                                        <sml:phone>
+                                            <sml:voice>tel:+39-0412407911</sml:voice>
+                                        </sml:phone>
+                                        <sml:address>
+                                            <sml:deliveryPoint>Castello 2737/F</sml:deliveryPoint>
+                                            <sml:city>Venezia</sml:city>
+                                            <sml:postalCode>30122</sml:postalCode>
+                                            <sml:country>IT</sml:country>
+                                            <sml:electronicMailAddress>mailto:mauro.bastianini@ismar.cnr.it</sml:electronicMailAddress>
+                                        </sml:address>
+                                        <sml:onlineResource xlink:href="http://www.ismar.cnr.it/"/>
+                                    </sml:contactInfo>
+                                </sml:ResponsibleParty>
+                            </sml:contact>
+                            <sml:documentation
+                                xlink:arcrole="urn:ogc:def:classifiers:OGC:documentType:datasheet">
+                                <sml:Document>
+                                    <gml:description>Datasheet</gml:description>
+                                    <sml:date>2008-04-01</sml:date>
+                                    <sml:format>application/pdf</sml:format>
+                                    <sml:onlineResource
+                                        xlink:href="http://www.davisnet.com/product_documents/weather/spec_sheets/6152_62_53_63_SS.pdf"
+                                    />
+                                </sml:Document>
+                            </sml:documentation>
+                            <sml:documentation xlink:role="urn:ogc:def:object:OGC:1.0:image">
+                                <sml:Document>
+                                    <gml:description>PTF image</gml:description>
+                                    <sml:format>image/jpg</sml:format>
+                                    <sml:onlineResource
+                                        xlink:href="http://www.ismar.cnr.it/infrastrutture/piattaforma-acqua-alta/image"
+                                    />
+                                </sml:Document>
+                            </sml:documentation>
+                            <sml:history xlink:arcrole="smlUpdates">
+                                <sml:EventList gml:id="smlUpdates">
+                                    <sml:member name="SML20141217">
+                                        <sml:Event gml:id="SMLUpdate20141217">
+                                            <sml:date>2014-12-17</sml:date>
+                                            <gml:description>Metadata creation</gml:description>
+                                        </sml:Event>
+                                    </sml:member>
+                                </sml:EventList>
+                            </sml:history>
+                            <!--=================================================-->
+                            <!--System Location (Fixed in this case)-->
+                            <!--=================================================-->
+                            <sml:position name="sensorPosition">
+                                <swe:Position fixed="false"
+                                    referenceFrame="urn:ogc:def:crs:EPSG::4326">
+                                    <swe:location>
+                                        <swe:Vector>
+                                            <swe:coordinate name="easting">
+                                                <swe:Quantity>
+                                                  <swe:uom code="degree"/>
+                                                  <swe:value>12.5088</swe:value>
+                                                </swe:Quantity>
+                                            </swe:coordinate>
+                                            <swe:coordinate name="northing">
+                                                <swe:Quantity>
+                                                  <swe:uom code="degree"/>
+                                                  <swe:value>45.3138</swe:value>
+                                                </swe:Quantity>
+                                            </swe:coordinate>
+                                            <swe:coordinate name="altitude">
+                                                <swe:Quantity>
+                                                  <swe:uom code="m"/>
+                                                  <swe:value>16.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:coordinate>
+                                        </swe:Vector>
+                                    </swe:location>
+                                </swe:Position>
+                            </sml:position>
+                            <sml:inputs>
+                                <sml:InputList>
+                                    <sml:input name="Temperature of the atmosphere">
+                                        <swe:ObservableProperty definition="SDN:P01::CDTBZZ01">
+                                            <gml:description>Temperature of the atmosphere</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input name="Relative humidity of the atmosphere">
+                                        <swe:ObservableProperty definition="SDN:P01::CRELZZ01">
+                                            <gml:description>Relative humidity of the atmosphere</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input name="Air pressure">
+                                        <swe:ObservableProperty definition="SDN:P02::CAPH">
+                                            <gml:description>Air pressure</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input
+                                        name="Wind speed (relative to moving platform) in the atmosphere by in-situ anemometer">
+                                        <swe:ObservableProperty definition="SDN:P01::ERWSSS01">
+                                            <gml:description>Wind speed (relative to moving platform) in the atmosphere by in-situ anemometer</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input
+                                        name="Wind direction (relative to moving platform) in the atmosphere by in-situ anemometer">
+                                        <swe:ObservableProperty definition="SDN:P01::ERWDSS01">
+                                            <gml:description>Wind direction (relative to moving platform) in the atmosphere by in-situ anemometer</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input name="Temperature of the water column">
+                                        <swe:ObservableProperty definition="SDN:P02::TEMP">
+                                            <gml:description>Temperature of the water column</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input name="Solar Radiation">
+                                        <swe:ObservableProperty definition="SDN:P02::CSLR">
+                                            <gml:description>Solar Radiation</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input
+                                        name="Downwelling vector irradiance as energy (ultra-violet wavelengths) in the atmosphere by radiometer">
+                                        <swe:ObservableProperty definition="SDN:P01::UVRDZZ01">
+                                            <gml:description>Downwelling vector irradiance as energy (ultra-violet wavelengths) in the atmosphere by radiometer</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input
+                                        name="Precipitation rate (liquid water equivalent) in the atmosphere by in-situ rain gauge">
+                                        <swe:ObservableProperty definition="SDN:P01::CPRRRG01">
+                                            <gml:description>Precipitation rate (liquid water equivalent) in the atmosphere by in-situ rain gauge</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                    <sml:input
+                                        name="Thickness of precipitation amount (liquid water equivalent) in the atmosphere by in-situ rain gauge">
+                                        <swe:ObservableProperty definition="SDN:P01::CPRPRG01">
+                                            <gml:description>Thickness of precipitation amount (liquid water equivalent) in the atmosphere by in-situ rain gauge</gml:description>
+                                        </swe:ObservableProperty>
+                                    </sml:input>
+                                </sml:InputList>
+                            </sml:inputs>
+                            <sml:outputs>
+                                <sml:OutputList>
+                                    <sml:output name="phenomenonTime">
+                                        <swe:Time
+                                            definition="http://www.opengis.net/def/property/OGC/0/PhenomenonTime"
+                                        />
+                                    </sml:output>
+                                    <sml:output name="Temperature_of_the_atmosphere_by_thermometer">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/CDTAZZ01/">
+                                            <gml:description>Temperature of the atmosphere</gml:description>
+                                            <swe:uom code="degC"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="degC"/>
+                                                  <swe:value>1.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output name="Relative_humidity_of_the_atmosphere">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/">
+                                            <gml:description>Relative humidity of the atmosphere</gml:description>
+                                            <swe:uom code="%"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="%"/>
+                                                  <swe:value>1.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output name="Air_pressure">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P02/current/CAPH/">
+                                            <gml:description>Air pressure</gml:description>
+                                            <swe:uom code="hPa"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="hPa"/>
+                                                  <swe:value>0.1</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output
+                                        name="Wind_speed_(relative_to_moving_platform)_in_the_atmosphere_by_in-situ_anemometer">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/ERWSSS01/">
+                                            <gml:description>Wind speed (relative to moving platform) in the atmosphere by in-situ anemometer</gml:description>
+                                            <swe:uom code="m/s"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="m/s"/>
+                                                  <swe:value>1.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output
+                                        name="Wind_direction_(relative_to_moving_platform)_in_the_atmosphere_by_in-situ_anemometer">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/">
+                                            <gml:description>Wind direction (relative to moving platform) in the atmosphere by in-situ anemometer</gml:description>
+                                            <swe:uom code="deg"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="deg"/>
+                                                  <swe:value>7.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output name="Temperature_of_the_water_column">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P02/current/TEMP/">
+                                            <gml:description>Temperature of the water column</gml:description>
+                                            <swe:uom code="degC"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="degC"/>
+                                                  <swe:value>0.5</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output name="Solar_Radiation">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P02/current/CSLR/">
+                                            <gml:description>Solar Radiation</gml:description>
+                                            <swe:uom code="W/m^2"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="%"/>
+                                                  <swe:value>5.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output
+                                        name="Precipitation_rate_(liquid_water_equivalent)_in_the_atmosphere_by_in-situ_rain_gauge">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/CPRRRG01/">
+                                            <gml:description>Precipitation rate (liquid water equivalent) in the atmosphere by in-situ rain gauge</gml:description>
+                                            <swe:uom code="mm"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="%"/>
+                                                  <swe:value>4.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                    <sml:output
+                                        name="Thickness_of_precipitation_amount_(liquid_water_equivalent)_in_the_atmosphere_by_in-situ_rain_gauge">
+                                        <swe:Quantity
+                                            definition="http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/">
+                                            <gml:description>Thickness of precipitation amount (liquid water equivalent) in the atmosphere by in-situ rain gauge</gml:description>
+                                            <swe:uom code="mm/h"/>
+                                            <swe:quality>
+                                                <swe:Quantity>
+                                                  <swe:uom code="%"/>
+                                                  <swe:value>5.0</swe:value>
+                                                </swe:Quantity>
+                                            </swe:quality>
+                                        </swe:Quantity>
+                                    </sml:output>
+                                </sml:OutputList>
+                            </sml:outputs>
+                        </sml:System>
+                    </sml:member>
+                </sml:SensorML>
+            </swes:data>
+        </swes:SensorDescription>
+    </swes:description>
+</swes:DescribeSensorResponse>
