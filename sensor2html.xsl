@@ -371,11 +371,11 @@
                             </div>
 
                             <div class="row">
-
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <h2>Position</h2>
                                     <div class="row">
                                         <div id="map-container">
-                                            <div id="map"/>
+                                            <div id="map"></div>
                                         </div>
                                         <!-- /map-outer -->
                                     </div>
@@ -486,7 +486,7 @@
                         <i class="glyphicon glyphicon-envelope"/>
                         <xsl:variable name="linkMailMan"
                             select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:manufacturer']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
-                        <a href="{concat('mailto:', $linkMailMan)}">
+                        <a href="{$linkMailMan}">
                             <xsl:text> </xsl:text>
                             <xsl:value-of
                                 select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:manufacturer']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
@@ -626,42 +626,44 @@
             </div>
         </xsl:if>
     </xsl:template>
-
-    <xsl:template name="position"> var popup; var map; <xsl:if
-            test="(sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value) and
-            sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value">
-            <h2>Position</h2>
-            <xsl:for-each
-                select="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System"
-                > map = L.map('map').setView([<xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value"
-                />, <xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value"
-                />], 13); L.marker([<xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value"
-                />, <xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value"
-                />]).addTo(map) .bindPopup("<b><xsl:value-of select="gml:name"/></b>"+ "<br/>" +
-                    "Position:<xsl:text> </xsl:text><xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value"
-                /><xsl:text> N</xsl:text>, <xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value"
-                /><xsl:text> E</xsl:text><br/>" + "Altitude:<xsl:text> </xsl:text><xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='altitude']/swe:Quantity/swe:value"
-                    /><xsl:text> </xsl:text><xsl:value-of
-                    select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='altitude']/swe:Quantity/swe:uom/@code"
-                /><xsl:text> </xsl:text>asl").openPopup(); //var popup = L.popup(); popup =
-                L.popup(); //map.on('click', onMapClick); </xsl:for-each>
-            L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { maxZoom: 16,
-            attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>
-            contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/"
-            >CC-BY-SA</a>, ' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>', id:
-            'examples.map-i875mjb7' }).addTo(map); </xsl:if>
+    
+    <xsl:template name="position">
+        <xsl:if
+            test="not(sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value) and not((sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value))">
+        
+        var popup;
+        var map;
+        <xsl:for-each select="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System">
+            map = L.map('map').setView([<xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value" />, <xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value" />], 13);
+            
+            
+            L.marker([<xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value" />, <xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value" />]).addTo(map)
+            .bindPopup("<b><xsl:value-of select="gml:name" /></b>"+
+            "<br />" +
+            "Position:<xsl:text> </xsl:text><xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='northing']/swe:Quantity/swe:value" /><xsl:text> N</xsl:text>, <xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='easting']/swe:Quantity/swe:value" /><xsl:text> E</xsl:text><br/>" +
+            "Altitude:<xsl:text> </xsl:text><xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='altitude']/swe:Quantity/swe:value" /><xsl:text> </xsl:text><xsl:value-of select="sml:position/swe:Position/swe:location/swe:Vector/swe:coordinate[@name='altitude']/swe:Quantity/swe:uom/@code" /><xsl:text> </xsl:text>asl").openPopup();
+            
+            //var popup = L.popup();
+            popup = L.popup();
+            
+            //map.on('click', onMapClick);
+        </xsl:for-each>
+        
+        L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+        maxZoom: 16,
+        attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        id: 'examples.map-i875mjb7'
+        }).addTo(map);
+        
+        </xsl:if>
     </xsl:template>
 
     <xsl:template name="contact">
         <xsl:if
-            test="(sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:owner']) or (sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:operator'])">
+            test="(swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System/sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:owner']) or 
+            (swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System/sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:operator'])">
             <h2>Contact</h2>
             <xsl:for-each
                 select="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System">
@@ -705,8 +707,7 @@
                             <i class="glyphicon glyphicon-envelope"/>
                             <xsl:variable name="linkMailOw"
                                 select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:owner']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
-                            <a href="{concat('mailto:', $linkMailOw)}">
-                                <i class="glyphicon glyphicon-envelope"/>
+                            <a href="{$linkMailOw}">
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of
                                     select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:owner']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
@@ -773,7 +774,6 @@
                             <xsl:variable name="linkMailOp"
                                 select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:operator']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
                             <a href="{concat('mailto:', $linkMailOp)}">
-                                <i class="glyphicon glyphicon-envelope"/>
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of
                                     select="sml:contact[@xlink:arcrole='urn:ogc:def:classifiers:OGC:contactType:operator']/sml:ResponsibleParty/sml:contactInfo/sml:address/sml:electronicMailAddress"/>
@@ -863,7 +863,7 @@
                 <xsl:value-of select="gml:description"/>
             </p>
             <a href="{sml:onlineResource/@xlink:href}" data-toggle="lightbox"
-                data-title="{gml:description}">
+                data-title="{gml:description}" aria-hidden="true">
                 <!--data-footer="A custom footer text">-->
                 <img src="{sml:onlineResource/@xlink:href}" class="img-responsive" height="100"
                     width="100"/>
@@ -872,11 +872,10 @@
 
     </xsl:template>
 
-    <xsl:template name="keywords"
-        match="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System/sml:keywords/sml:KeywordList">
-        <xsl:if test="sml:keyword">
+    <xsl:template name="keywords">
+        <xsl:if test="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System/sml:keywords/sml:KeywordList/sml:keyword">
             <ul class="nav nav-pills">
-                <xsl:for-each select="sml:keyword">
+                <xsl:for-each select="swes:DescribeSensorResponse/swes:description/swes:SensorDescription/swes:data/sml:SensorML/sml:member/sml:System/sml:keywords/sml:KeywordList/sml:keyword">
                     <xsl:if test="not(contains(., 'http://')) and not(contains(., 'offering:'))">
                         <li class="disabled">
                             <!--xsl:variable name="linkKeyword" select="." /-->
