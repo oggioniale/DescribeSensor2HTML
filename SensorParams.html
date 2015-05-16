@@ -1,0 +1,262 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns:swes="http://www.opengis.net/swes/2.0" xmlns:sos="http://www.opengis.net/sos/2.0" xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:sml="http://www.opengis.net/sensorML/1.0.1" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Human readable of parameters for crate a insertObservation request">
+      <meta name="author" content="Alessandro Oggioni">
+      <meta name="author" content="Paolo Tagliolato">
+      <link rel="icon" href="http://skmi.irea.cnr.it/static/geosk/img/favicon.ico">
+      <title>Parameters of sensor</title>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css">
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet"><script src="http://code.jquery.com/jquery-1.11.1.min.js"></script><script src="http://rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script><script type="text/javascript">
+                    $(document).ready(function ($) {
+                    
+                    // delegate calls to data-toggle="lightbox"
+                    $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                    onShown: function() {
+                    if (window.console) {
+                    return console.log('Checking our the events huh?');
+                    }
+                    },
+                    onNavigate: function(direction, itemIndex) {
+                    if (window.console) {
+                    return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                    }
+                    }
+                    });
+                    });
+                    
+                    //Programatically call
+                    $('#open-image').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                    });
+                    $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                    });
+                    
+                    $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                    onShown: function() {
+                    var a = this.modal_content.find('.modal-footer a');
+                    if(a.length > 0) {
+                    a.click(function(e) {
+                    e.preventDefault();
+                    this.navigateTo(2);
+                    }.bind(this));
+                    }
+                    }
+                    });
+                    });
+                    
+                    });
+                </script><script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script></head>
+   <body>
+      <div class="container">
+         <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="page-header">
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+                  <h1> </h1>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/ http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/
+                           http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/ http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/
+                           http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/ http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/
+                           http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/ http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/
+                           http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/ http://vocab.nerc.ac.uk/collection/P01/current/EGTSSS01/
+                           http://vocab.nerc.ac.uk/collection/P02/current/CAPH/ http://vocab.nerc.ac.uk/collection/P02/current/TEMP/
+                           http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://vocab.nerc.ac.uk/collection/P02/current/TEMP/
+                           http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations1</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://vocab.nerc.ac.uk/collection/P02/current/TEMP/
+                           http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations2</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation
+                           http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://vocab.nerc.ac.uk/collection/P02/current/TEMP/
+                           http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                     <h3>offering</h3>
+                     <p><b>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca/observations</b><br></p>
+                     <h3>observationType</h3>
+                     <p><b>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</b><br></p>
+                     <h3>procedure</h3>
+                     <p><b>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</b><br></p>
+                     <h3>observedProperty</h3>
+                     <p><b>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/ http://www.opengis.net/def/property/OGC/0/PhenomenonTime</b></p>
+                     <h3>featureOfInterestType</h3>
+                     <p><b>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</b><br></p>
+                  </div>
+               </div>
+            </div><a href="http://sp7.irea.cnr.it/jboss/MDService/rest/getEditor?template=SensorML_test&amp;version=3.00&amp;duplicate=1391" role="button" class="btn btn-success btn-mini pull-right" target="_blank">
+               How to use this parameters
+               </a></div>
+      </div><script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script></body>
+</html>

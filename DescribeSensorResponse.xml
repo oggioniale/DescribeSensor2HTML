@@ -270,11 +270,47 @@
                                 </sml:Document>
                             </sml:documentation>
                             <sml:history xlink:arcrole="smlUpdates">
-                                <sml:EventList gml:id="smlUpdates">
-                                    <sml:member name="SML20141217">
-                                        <sml:Event gml:id="SMLUpdate20141217">
-                                            <sml:date>2014-12-17</sml:date>
+                                <sml:EventList gml:id="Updates">
+                                    <sml:member name="SML20150419">
+                                        <sml:Event gml:id="SMLUpdate20150419">
+                                            <sml:date>2015-04-19</sml:date>
                                             <gml:description>Metadata creation</gml:description>
+                                        </sml:Event>
+                                    </sml:member>
+                                </sml:EventList>
+                            </sml:history>
+                            <sml:history xlink:arcrole="smlCalibraition">
+                                <sml:EventList gml:id="Calibration">
+                                    <sml:member name="SML20070205">
+                                        <sml:Event gml:id="SMLCalibration20070205">
+                                            <sml:date>2007-02-05</sml:date>
+                                            <gml:description>Calibration</gml:description>
+                                            <sml:documentation xlink:href="http://www.moist.it/doc/SBE%205T%20-%20Calibration%204641%202007-02-05.pdf"/>
+                                        </sml:Event>
+                                    </sml:member>
+                                    <sml:member name="SML20070421">
+                                        <sml:Event gml:id="SMLUpdate20070421">
+                                            <sml:date>2007-04-21</sml:date>
+                                            <gml:description>Calibration</gml:description>
+                                            <sml:documentation xlink:href="http://www.moist.it/doc/SBE%2016plus%20-%20Calibration%205166%202007-04-21.pdf"/>
+                                        </sml:Event>
+                                    </sml:member>
+                                </sml:EventList>
+                            </sml:history>
+                            <sml:history xlink:arcrole="smlTest">
+                                <sml:EventList gml:id="Test">
+                                    <sml:member name="SML20070315">
+                                        <sml:Event gml:id="SMLTest20070315">
+                                            <sml:date>2007-03-15</sml:date>
+                                            <gml:description>SBE Pressure test</gml:description>
+                                            <sml:documentation xlink:href="http://www.moist.it/doc/SBE%205T%20-%20Test%204641%202007-03-15.pdf"/>
+                                        </sml:Event>
+                                    </sml:member>
+                                    <sml:member name="SML20070419">
+                                        <sml:Event gml:id="SMLTest20070419">
+                                            <sml:date>2007-04-19</sml:date>
+                                            <gml:description>SBE Pressure test</gml:description>
+                                            <sml:documentation xlink:href="http://www.moist.it/doc/SBE%2016plus%20-%20Test%205166%202007-04-19.pdf"/>
                                         </sml:Event>
                                     </sml:member>
                                 </sml:EventList>

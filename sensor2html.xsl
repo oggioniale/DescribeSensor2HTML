@@ -294,7 +294,7 @@
                 <script src="http://code.jquery.com/jquery-1.11.1.min.js"/>
 
                 <!--<script src="//code.jquery.com/jquery.js"/>-->
-                <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"/>
+                <script src="http://rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"/>
                 <script type="text/javascript">
                     $(document).ready(function ($) {
                     
@@ -552,7 +552,7 @@
                                 <xsl:variable name="class">
                                     <xsl:choose>
                                         <xsl:when
-                                            test="../../@gml:id='smlUpdates' or ../../@gml:id='calibration'"
+                                            test="../../@gml:id='Updates' or ../../@gml:id='Calibration' or ../../@gml:id='otherEvents'"
                                                 ><xsl:value-of select="../../@gml:id"/>
                                             timeline-inverted</xsl:when>
                                         <xsl:otherwise>
@@ -567,14 +567,17 @@
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <xsl:choose>
-                                                <xsl:when test="../../@gml:id='smlUpdates'">
+                                                <xsl:when test="../../@gml:id='Updates'">
                                                   <h4 class="timeline-title">Update</h4>
                                                 </xsl:when>
-                                                <xsl:when test="../../@gml:id='operations'">
+                                                <xsl:when test="../../@gml:id='Operations'">
                                                   <h4 class="timeline-title">Operations</h4>
                                                 </xsl:when>
-                                                <xsl:when test="../../@gml:id='calibration'">
+                                                <xsl:when test="../../@gml:id='Calibration'">
                                                   <h4 class="timeline-title">Calibration</h4>
+                                                </xsl:when>
+                                                <xsl:when test="../../@gml:id='Installation'">
+                                                    <h4 class="timeline-title">installation</h4>
                                                 </xsl:when>
                                                 <xsl:when test="../../@gml:id='otherEvents'">
                                                   <h4 class="timeline-title">Other events</h4>

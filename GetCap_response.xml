@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sos:Capabilities xmlns:sos="http://www.opengis.net/sos/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fes="http://www.opengis.net/fes/2.0" xmlns:swes="http://www.opengis.net/swes/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" version="2.0.0" xsi:schemaLocation="http://www.opengis.net/fes/2.0 http://schemas.opengis.net/filter/2.0/filterAll.xsd http://www.opengis.net/swes/2.0 http://schemas.opengis.net/swes/2.0/swes.xsd http://www.opengis.net/sos/2.0 http://schemas.opengis.net/sos/2.0/sosGetCapabilities.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/ows/1.1 http://schemas.opengis.net/ows/1.1.0/owsAll.xsd">
+  <ows:ServiceIdentification>
+    <ows:Title>StarterKit del Centro Previsioni Segnalazioni Maree</ows:Title>
+    <ows:Abstract>Questo strumento ha come scopo di rendere disponibili le osservazioni provenienti dalle stazioni della rete mareografica del Centro Previsioni Segnalazioni Maree attraverso l'uso di servizi web OGC di tipo Sensor Web (SWE) ed in particolare Sensor Observation Service (SOS). This tool aims to make available the observations received from the network stations of the Tidal Prediction Center (Centro Previsioni Segnalazioni Maree) through the use of web services OGC Sensor Web type (SWE) and, in particular, Sensor Observation Service (SOS).</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>forecasts</ows:Keyword>
+      <ows:Keyword>maree</ows:Keyword>
+      <ows:Keyword>observation</ows:Keyword>
+      <ows:Keyword>osservazioni</ows:Keyword>
+      <ows:Keyword>previsioni</ows:Keyword>
+      <ows:Keyword>segnalazioni</ows:Keyword>
+      <ows:Keyword>tide</ows:Keyword>
+    </ows:Keywords>
+    <ows:ServiceType>OGC:SOS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+    <ows:Profile>http://www.opengis.net/extension/SOSDO/1.0/observationDeletion</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/categoryObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/countObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/geometryObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/measurement</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/textObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/1.0/conf/truthObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/categoryObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/countObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/geometryObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/measurement</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/samplingCurve</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/samplingPoint</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/samplingSurface</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/spatialSampling</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/textObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/OMXML/2.0/conf/truthObservation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/1.0/conf/core</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/1.0/conf/enhanced</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/core</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/daRetrieval</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/foiRetrieval</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/insertionCap</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/json</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/kvp-core</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/obsInsertion</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/pox</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/rest</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/resultInsertion</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/resultRetrieval</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/sensorDeletion</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/sensorInsertion</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/soap</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SOS/2.0/conf/updateSensorDescription</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/core</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/general-encoding-rules</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/text-encoding-rules</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/uml-block-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/uml-record-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/uml-simple-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/uml-simple-encodings</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/xsd-block-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/xsd-record-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/xsd-simple-components</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/SWE/2.0/conf/xsd-simple-encodings</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/uml-measurement-timeries-tvp-observation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/uml-timeseries-tvp-observation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/xsd-measurement-timeseries-tvp</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/xsd-timeseries-observation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/xsd-timeseries-tvp-observation</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/waterml/2.0/conf/xsd-xml-rules</ows:Profile>
+    <ows:Fees>None</ows:Fees>
+    <ows:AccessConstraints>None</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Istituzione Centro Previsioni Segnalazioni Maree</ows:ProviderName>
+    <ows:ProviderSite xlink:href="http://www.comune.venezia.it/maree/"/>
+    <ows:ServiceContact>
+      <ows:IndividualName>Istituzione Centro Previsioni Segnalazioni Maree</ows:IndividualName>
+      <ows:PositionName>None</ows:PositionName>
+      <ows:ContactInfo>
+        <ows:Phone>
+          <ows:Voice>+390412748787</ows:Voice>
+        </ows:Phone>
+        <ows:Address>
+          <ows:DeliveryPoint>S.Marco 4090</ows:DeliveryPoint>
+          <ows:City>Venezia</ows:City>
+          <ows:AdministrativeArea>Venezia</ows:AdministrativeArea>
+          <ows:PostalCode>30124</ows:PostalCode>
+          <ows:Country>Italia</ows:Country>
+          <ows:ElectronicMailAddress>maree@comune.venezia.it</ows:ElectronicMailAddress>
+        </ows:Address>
+      </ows:ContactInfo>
+    </ows:ServiceContact>
+  </ows:ServiceProvider>
+  <ows:OperationsMetadata>
+    <ows:Operation name="Batch">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="DeleteSensor">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="DescribeSensor">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedureDescriptionFormat">
+        <ows:AllowedValues>
+          <ows:Value>http://www.opengis.net/sensorML/1.0.1</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="validTime">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetCapabilities">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="AcceptFormats">
+        <ows:AllowedValues>
+          <ows:Value>application/xml</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="AcceptVersions">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+          <ows:Value>2.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="Sections">
+        <ows:AllowedValues>
+          <ows:Value>All</ows:Value>
+          <ows:Value>Contents</ows:Value>
+          <ows:Value>FilterCapabilities</ows:Value>
+          <ows:Value>InsertionCapabilities</ows:Value>
+          <ows:Value>OperationsMetadata</ows:Value>
+          <ows:Value>ServiceIdentification</ows:Value>
+          <ows:Value>ServiceProvider</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="updateSequence">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetDataAvailability">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="featureOfInterest">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="observedProperty">
+        <ows:AllowedValues>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/EGTSSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/CAPH/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</ows:Value>
+          <ows:Value>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetFeatureOfInterest">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="featureOfInterest">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="observedProperty">
+        <ows:AllowedValues>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/EGTSSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/CAPH/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</ows:Value>
+          <ows:Value>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="spatialFilter">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MinimumValue>45.22309444 12.25694444</ows:MinimumValue>
+            <ows:MaximumValue>45.483039 12.42655318</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetObservation">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="featureOfInterest">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="observedProperty">
+        <ows:AllowedValues>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/EGTSSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/CAPH/</ows:Value>
+          <ows:Value>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</ows:Value>
+          <ows:Value>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="offering">
+        <ows:AllowedValues>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations1</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations2</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca/observations</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="responseFormat">
+        <ows:AllowedValues>
+          <ows:Value>application/json</ows:Value>
+          <ows:Value>http://www.opengis.net/om/2.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="spatialFilter">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MinimumValue>45.22309444 12.25694444</ows:MinimumValue>
+            <ows:MaximumValue>45.483039 12.42655318</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="temporalFilter">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MinimumValue>2015-02-25T16:00:00.000Z</ows:MinimumValue>
+            <ows:MaximumValue>2015-04-22T08:30:00.000Z</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetResult">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="featureOfInterest">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="observedProperty">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="offering">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetResultTemplate">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://mareesk.irea.cnr.it/observations/sos/kvp?">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/x-kvp</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Get>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="observedProperty">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="offering">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="InsertObservation">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="observation">
+        <ows:AnyValue/>
+        <ows:DataType ows:reference="http://schemas.opengis.net/om/2.0/observation.xsd#OM_Observation"/>
+      </ows:Parameter>
+      <ows:Parameter name="offering">
+        <ows:AllowedValues>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations1</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations2</ows:Value>
+          <ows:Value>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca/observations</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="InsertResult">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="resultValues">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="template">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="InsertResultTemplate">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="proposedTemplate">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="InsertSensor">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="metadata">
+        <ows:AnyValue/>
+        <ows:DataType ows:reference="http://schemas.opengis.net/sos/2.0/sosInsertionCapabilities.xsd#InsertionCapabilities"/>
+      </ows:Parameter>
+      <ows:Parameter name="observableProperty">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="procedureDescription">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="procedureDescriptionFormat">
+        <ows:AllowedValues>
+          <ows:Value>http://www.opengis.net/sensorML/1.0.1</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="UpdateSensorDescription">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/json">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/json</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/pox">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/xml</ows:Value>
+                <ows:Value>text/xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+          <ows:Post xlink:href="http://mareesk.irea.cnr.it/observations/sos/soap">
+            <ows:Constraint name="Content-Type">
+              <ows:AllowedValues>
+                <ows:Value>application/soap+xml</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="description">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</ows:Value>
+          <ows:Value>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedureDescriptionFormat">
+        <ows:AllowedValues>
+          <ows:Value>http://www.opengis.net/sensorML/1.0.1</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Parameter name="service">
+      <ows:AllowedValues>
+        <ows:Value>SOS</ows:Value>
+      </ows:AllowedValues>
+    </ows:Parameter>
+    <ows:Parameter name="version">
+      <ows:AllowedValues>
+        <ows:Value>1.0.0</ows:Value>
+        <ows:Value>2.0.0</ows:Value>
+      </ows:AllowedValues>
+    </ows:Parameter>
+  </ows:OperationsMetadata>
+  <sos:extension>
+    <sos:InsertionCapabilities>
+      <sos:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</sos:procedureDescriptionFormat>
+      <sos:featureOfInterestType>SamplingCurve</sos:featureOfInterestType>
+      <sos:featureOfInterestType>SamplingPoint</sos:featureOfInterestType>
+      <sos:featureOfInterestType>SamplingSurface</sos:featureOfInterestType>
+      <sos:featureOfInterestType>http://www.opengis.net/def/nil/OGC/0/unknown</sos:featureOfInterestType>
+      <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingCurve</sos:featureOfInterestType>
+      <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+      <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface</sos:featureOfInterestType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/waterml/2.0/MeasurementTimeseriesTVPObservation</sos:observationType>
+      <sos:observationType>http://www.opengis.net/def/observationType/waterml/2.0/measurementDRTimeseriesObservation</sos:observationType>
+      <sos:supportedEncoding>http://www.opengis.net/swe/2.0/TextEncoding</sos:supportedEncoding>
+    </sos:InsertionCapabilities>
+  </sos:extension>
+  <sos:filterCapabilities>
+    <fes:Filter_Capabilities>
+      <fes:Conformance>
+        <fes:Constraint name="ImplementsQuery">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsAdHocQuery">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsFunctions">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsResourceld">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsMinStandardFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsStandardFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsMinSpatialFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsSpatialFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsMinTemporalFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsTemporalFilter">
+          <ows:NoValues/>
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsVersionNav">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsSorting">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsExtendedOperators">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsMinimumXPath">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+        <fes:Constraint name="ImplementsSchemaElementFunc">
+          <ows:NoValues/>
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </fes:Constraint>
+      </fes:Conformance>
+      <fes:Spatial_Capabilities>
+        <fes:GeometryOperands>
+          <fes:GeometryOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:Envelope"/>
+        </fes:GeometryOperands>
+        <fes:SpatialOperators>
+          <fes:SpatialOperator name="BBOX">
+            <fes:GeometryOperands>
+              <fes:GeometryOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:Envelope"/>
+            </fes:GeometryOperands>
+          </fes:SpatialOperator>
+        </fes:SpatialOperators>
+      </fes:Spatial_Capabilities>
+      <fes:Temporal_Capabilities>
+        <fes:TemporalOperands>
+          <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+          <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+        </fes:TemporalOperands>
+        <fes:TemporalOperators>
+          <fes:TemporalOperator name="Before">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="After">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="Begins">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="Ends">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="EndedBy">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="BegunBy">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="During">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="TEquals">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="TContains">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="TOverlaps">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="Meets">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="MetBy">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+          <fes:TemporalOperator name="OverlappedBy">
+            <fes:TemporalOperands>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimeInstant"/>
+              <fes:TemporalOperand xmlns:ns="http://www.opengis.net/gml/3.2" name="ns:TimePeriod"/>
+            </fes:TemporalOperands>
+          </fes:TemporalOperator>
+        </fes:TemporalOperators>
+      </fes:Temporal_Capabilities>
+    </fes:Filter_Capabilities>
+  </sos:filterCapabilities>
+  <sos:contents>
+    <sos:Contents>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Burano</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/Burano"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.483039 12.417525</gml:lowerCorner>
+              <gml:upperCorner>45.483039 12.417525</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_1">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_1">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaCitta</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/ChioggiaCitta"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.22309444 12.28015278</gml:lowerCorner>
+              <gml:upperCorner>45.22309444 12.28015278</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_2">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_2">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_ChioggiaPorto</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/ChioggiaPorto"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.23253889 12.28059722</gml:lowerCorner>
+              <gml:upperCorner>45.23253889 12.28059722</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_3">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_3">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaNordLido</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudChioggia</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/DigaSudChioggia"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.228979 12.309116</gml:lowerCorner>
+              <gml:upperCorner>45.228979 12.309116</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_5">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_5">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_DigaSudLido</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/DigaSudLido"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.41822951 12.42655318</gml:lowerCorner>
+              <gml:upperCorner>45.41822951 12.42655318</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_6">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:10:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_6">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:10:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Fusina</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/Fusina"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.40888889 12.25694444</gml:lowerCorner>
+              <gml:upperCorner>45.40888889 12.25694444</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_7">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_7">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_MalamoccoPorto</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWDSS01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/ERWSZZ01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/MalamoccoPorto"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.3398 12.291967</gml:lowerCorner>
+              <gml:upperCorner>45.3398 12.291967</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_8">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_8">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Misericordia</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/Misericordia"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.445331 12.336206</gml:lowerCorner>
+              <gml:upperCorner>45.445331 12.336206</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_9">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_9">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_Murano</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PalazzoCavalli</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/CDTBZZ01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/CRELZZ01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P01/current/EGTSSS01/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/CAPH/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/PalazzoCavalli"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.43643244 12.33353521</gml:lowerCorner>
+              <gml:upperCorner>45.43643244 12.33353521</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_11">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_11">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanalGrande"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.4309591917 12.3370517111</gml:lowerCorner>
+              <gml:upperCorner>45.4309591917 12.3370517111</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_12">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_12">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations1</swes:identifier>
+          <swes:name>pippo</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande/observations2</swes:identifier>
+          <swes:name>pippa</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanalGrande</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/TEMP/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CountObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_SWEArrayObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation</sos:observationType>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TruthObservation</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+      <swes:offering>
+        <sos:ObservationOffering xmlns:ns="http://www.opengis.net/sos/2.0">
+          <swes:identifier>offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca/observations</swes:identifier>
+          <swes:name>Offering for sensor offering:http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</swes:name>
+          <swes:procedure>http://sp7.irea.cnr.it/sensors/mareesk.irea.cnr.it/procedure/SIAPMICROS/DA9000/noSerialNumberDeclared/20140723044959616_PuntaSaluteCanaleGiudecca</swes:procedure>
+          <swes:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1</swes:procedureDescriptionFormat>
+          <swes:observableProperty>http://vocab.nerc.ac.uk/collection/P02/current/ASLV/</swes:observableProperty>
+          <swes:observableProperty>http://www.opengis.net/def/property/OGC/0/PhenomenonTime</swes:observableProperty>
+          <swes:relatedFeature>
+            <swes:FeatureRelationship>
+              <swes:target xlink:href="http://sp7.irea.cnr.it/featureOfInterest/PuntaSaluteCanaleGiudecca"/>
+            </swes:FeatureRelationship>
+          </swes:relatedFeature>
+          <sos:observedArea>
+            <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+              <gml:lowerCorner>45.43066944 12.33638611</gml:lowerCorner>
+              <gml:upperCorner>45.43066944 12.33638611</gml:upperCorner>
+            </gml:Envelope>
+          </sos:observedArea>
+          <sos:phenomenonTime>
+            <gml:TimePeriod gml:id="phenomenonTime_15">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:phenomenonTime>
+          <sos:resultTime>
+            <gml:TimePeriod gml:id="resultTime_15">
+              <gml:beginPosition>2015-02-25T16:00:00.000Z</gml:beginPosition>
+              <gml:endPosition>2015-04-22T08:30:00.000Z</gml:endPosition>
+            </gml:TimePeriod>
+          </sos:resultTime>
+          <sos:responseFormat>application/json</sos:responseFormat>
+          <sos:responseFormat>http://www.opengis.net/om/2.0</sos:responseFormat>
+          <sos:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement</sos:observationType>
+          <sos:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint</sos:featureOfInterestType>
+        </sos:ObservationOffering>
+      </swes:offering>
+    </sos:Contents>
+  </sos:contents>
+</sos:Capabilities>
